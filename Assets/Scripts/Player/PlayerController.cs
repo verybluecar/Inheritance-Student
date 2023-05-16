@@ -14,10 +14,18 @@ public class PlayerController : MonoBehaviour
 
     private Vector2 movement;
 
+    public float health;
+    public float maxHealth;
+
+    public ParticleSystem SpeedParticle;
+
 
 
     void Start()
     {
+        
+
+        SpeedParticle.gameObject.SetActive(false);
         mainCamera = Camera.main;
 
         EquipWeapon(defaultWeapon);
